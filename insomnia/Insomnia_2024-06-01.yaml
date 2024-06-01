@@ -1,0 +1,85 @@
+_type: export
+__export_format: 4
+__export_date: 2024-06-01T12:04:16.194Z
+__export_source: insomnia.desktop.app:v9.2.0
+resources:
+  - _id: req_d2f9cfdd1ba341eaa33c12a88a447cc3
+    parentId: wrk_57a35af8da7a4843b796c111d885e856
+    modified: 1717242525692
+    created: 1717242472730
+    url: localhost:8080/ecc
+    name: test1
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    authentication: {}
+    metaSortKey: -1717242472730
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_57a35af8da7a4843b796c111d885e856
+    parentId: null
+    modified: 1717242429464
+    created: 1717242429464
+    name: my-spec.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: env_5b193f2ddbbbb878473b213c1588ab66834b3dbd
+    parentId: wrk_57a35af8da7a4843b796c111d885e856
+    modified: 1717242429477
+    created: 1717242429477
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1717242429477
+    _type: environment
+  - _id: jar_5b193f2ddbbbb878473b213c1588ab66834b3dbd
+    parentId: wrk_57a35af8da7a4843b796c111d885e856
+    modified: 1717242429482
+    created: 1717242429482
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_3a5f1661fd3347838b58d2ff001be88c
+    parentId: wrk_57a35af8da7a4843b796c111d885e856
+    modified: 1717243340006
+    created: 1717243340006
+    fileName: New Document
+    contents: '{"openapi":"3.0.1","info":{"title":"OpenAPI
+      definition","version":"v0"},"servers":[{"url":"http://localhost:8080","description":"Generated
+      server
+      url"}],"paths":{"/ecc":{"get":{"tags":["ecc-controller"],"operationId":"eccService","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"string"}}}}}}}},"components":{}}'
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_1c8827aeb57141af933c920eb867fd7d
+    parentId: wrk_57a35af8da7a4843b796c111d885e856
+    modified: 1717242712339
+    created: 1717242698466
+    name: test
+    metaSortKey: -1717242698467
+    _type: unit_test_suite
+  - _id: ut_0effded8e5b44a819d44051ce7052900
+    parentId: uts_1c8827aeb57141af933c920eb867fd7d
+    modified: 1717242723286
+    created: 1717242719496
+    requestId: req_d2f9cfdd1ba341eaa33c12a88a447cc3
+    name: Returns 200
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    metaSortKey: -1717242719496
+    _type: unit_test
